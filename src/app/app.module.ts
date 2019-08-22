@@ -7,16 +7,10 @@ import { MaterialModule } from '@material/material.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { FormComponent } from './form/form.component';
-import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    FormComponent,
-    TableComponent
   ],
   imports: [
     BrowserModule,

@@ -1,24 +1,26 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { FormComponent } from './form/form.component';
-import { TableComponent } from './table/table.component';
-
 
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent,
+    loadChildren: () => {
+      return import('./dashboard/dashboard.module').then(m => m.DashboardModule);
+    },
     pathMatch: 'full',
   },
   {
     path: 'form',
-    component: FormComponent,
+    loadChildren: () => {
+      return import('./form/form.module').then(m => m.FormModule);
+    },
   },
   {
     path: 'table',
-    component: TableComponent
+    loadChildren: () => {
+      return import('./table/table.module').then(m => m.TableModule);
+    },
   },
 ];
 
