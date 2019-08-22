@@ -12,17 +12,13 @@ export class PreloadingStrategyService implements PreloadingStrategy {
   constructor() { }
 
   preload(route: Route, load: () => Observable<any>): Observable<any> {
-    return of();
-    // if (route.data && route.data['preload']) {
-    //   // add the route path to the preloaded module array
-    //   this.preloadedModules.push(route.path);
-
-    //   // log the route path to the console
-    //   console.log('Preloaded: ' + route.path);
-
-    //   return load();
-    // } else {
-    //   return of(null);
-    // }
+    if (route.data && route.data['preload']) {
+      this.preloadedModules.push(route.path);
+      console.log('Preloaded: ' + route.path);
+      // load
+      return load();
+    } else {
+      return of(null);
+    }
   }
 }

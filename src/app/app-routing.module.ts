@@ -10,7 +10,7 @@ const routes: Routes = [
       return import('./dashboard/dashboard.module').then(m => m.DashboardModule);
     },
     pathMatch: 'full',
-    // data: { preload : true }
+    data: { preload : true }
   },
   {
     path: 'form',
@@ -23,14 +23,14 @@ const routes: Routes = [
     loadChildren: () => {
       return import('./table/table.module').then(m => m.TableModule);
     },
-    // data: { preload : true }
+    data: { preload : true }
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     enableTracing: false,
-    // preloadingStrategy: PreloadingStrategyService
+    preloadingStrategy: PreloadingStrategyService
   })],
   exports: [RouterModule]
 })
