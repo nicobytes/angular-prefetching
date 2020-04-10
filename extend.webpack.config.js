@@ -10,9 +10,6 @@ module.exports = {
       },
       routeProvider() {
         return parseRoutes('.');
-      },
-      routeFormatter(path) {
-        return path.replace(/^\/app/, '');
       }
     }),
   ]
