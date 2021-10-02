@@ -105,15 +105,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         },
@@ -134,6 +130,7 @@
   },
   "defaultProject": "ngbolivia-prefetching",
   "cli": {
-    "analytics": "02492ecb-bb62-4b46-bd3c-65790e48429c"
+    "analytics": "02492ecb-bb62-4b46-bd3c-65790e48429c",
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }
