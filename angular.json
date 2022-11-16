@@ -15,9 +15,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:browser-esbuild",
           "options": {
-            "outputPath": "dist/ngbolivia-prefetching",
+            "outputPath": "dist/app-prefetching",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -128,9 +128,10 @@
       }
     }
   },
-  "defaultProject": "ngbolivia-prefetching",
   "cli": {
     "analytics": "02492ecb-bb62-4b46-bd3c-65790e48429c",
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
