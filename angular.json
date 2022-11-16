@@ -131,9 +131,10 @@
       }
     }
   },
-  "defaultProject": "ngbolivia-prefetching",
   "cli": {
     "analytics": "02492ecb-bb62-4b46-bd3c-65790e48429c",
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
